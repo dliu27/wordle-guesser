@@ -1,0 +1,27 @@
+{
+  "name": "Wordle Guesser",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "storage",
+    "*://*/*",
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "description": "Description",
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["start.js"],
+      "matches": ["https://www.nytimes.com/games/wordle/index.html"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["wordle.js"]
+}
